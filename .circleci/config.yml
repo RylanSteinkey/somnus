@@ -11,6 +11,7 @@ jobs:
               conda update conda
               conda env create -f data/arm64.yml
               source activate somnus
+              pip install -e .
 
 workflows:
   version: 2
