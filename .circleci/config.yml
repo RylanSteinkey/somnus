@@ -4,6 +4,7 @@ jobs:
     test:
       docker:
         - image: continuumio/anaconda3:5.0.1
+      resource_class: arm.medium
       steps:
         - checkout
         - run:
