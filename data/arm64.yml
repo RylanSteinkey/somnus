@@ -1,0 +1,4 @@
+name: somnus
+channels:
+  - defaults
+prefix: /Users/bit128/miniconda3/envs/somnus
