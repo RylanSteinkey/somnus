@@ -10,7 +10,7 @@ jobs:
             command: |
               conda update conda
               conda env create -f data/arm64.yml
-              conda activate somnus
+              source activate somnus
 
 workflows:
   version: 2
