@@ -12,6 +12,7 @@ jobs:
               conda env create -f data/arm64.yml
               source activate somnus
               pip install -e .
+              pytest tests
 
 workflows:
   version: 2
