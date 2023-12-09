@@ -1,0 +1,19 @@
+version: 2
+
+jobs:
+    test:
+      docker:
+        - image: continuumio/anaconda3:5.0.1
+      steps:
+        - checkout
+        - run:
+            command: |
+              conda update conda
+              conda env create -f data/arm64.yml
+              conda activate somnus
+
+workflows:
+  version: 2
+  all:
+    jobs:
+      - test
