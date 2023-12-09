@@ -4,14 +4,13 @@ jobs:
     test:
       docker:
         - image: continuumio/anaconda3:5.0.1
-      resource_class: arm.medium
       steps:
         - checkout
         - run:
             command: |
               conda update conda
-              conda env create -f data/arm64.yml
-              source activate somnus
+              conda env create -f data/envi/x86.yaml
+              source activate zx86
               pip install -e .
               pytest tests
 
